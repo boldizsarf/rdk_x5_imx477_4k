@@ -171,7 +171,7 @@ The instructions below assume:
 ```bash
 cd ~
 # Adapt URL once the repo is public
-git clone https://github.com/<your-org>/rdk_x5_imx477_4k.git
+git clone https://github.com/boldizsarf/rdk_x5_imx477_4k.git
 ```
 
 ### 2. Create the ROS 2 workspace and copy the packages
