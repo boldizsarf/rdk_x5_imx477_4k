@@ -1,0 +1,23 @@
+[Unit]
+Description=IMX477 4K camera + VPS 1080p downscale (ROS2 pipeline)
+After=network-online.target cam-service.service
+Wants=network-online.target cam-service.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/dual_cam_ws
+
+Environment=RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+Environment=RCUTILS_LOGGING_BUFFERED_STREAM=1
+
+ExecStart=/opt/vision/imx477_pipeline.sh
+
+Restart=on-failure
+RestartSec=5
+
+KillSignal=SIGINT
+TimeoutStopSec=20
+
+[Install]
+WantedBy=multi-user.target

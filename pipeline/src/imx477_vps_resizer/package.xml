@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>imx477_vps_resizer</name>
+  <version>0.0.1</version>
+  <description>Hardware VPS resizer for IMX477 4K→1080p</description>
+
+  <maintainer email="contact@boldizsarfodor.com">Boldizsár Fodor</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
